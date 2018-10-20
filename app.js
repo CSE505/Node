@@ -4,11 +4,14 @@ app.service('myservice', function ($http) {
     return $http.get('http://localhost:8080/products')
     .then(function (posRes) {
       return posRes.data;
-    }, function (errRes){
+    },
+
+    function (errRes) {
       return errRes;
     });
   };
-})
+});
+
 app.controller('ctrl', function ($scope, myService) {
   myService.myFun().then(function (res) {
     $scope.result = res;
