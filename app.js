@@ -1,4 +1,5 @@
-var app = angular.module('myApp', []);
+var app = angular.module('app', []);
+
 app.service('myservice', function ($http) {
   this.myFun = function () {
     return $http.get('http://localhost:8080/products')
