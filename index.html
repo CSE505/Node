@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+  <head>
+    <meta charset="utf-8">
+    <title>Node Integration</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <table border="1" cellpadding="10px" cellspacing="10px" align="center">
+       <thead style="text-align:center; font-size:30px">
+           <tr>
+               <th>ID</th>
+               <th>NAME</th>
+               <th>COST</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr ng-repeat= "x in result">
+               <td>{{x.p_id}}</td>
+               <td>{{x.p_name}}</td>
+               <td>{{x.p_code}}</td>
+           </tr>
+       </tbody>
+   </table>
+  </body>
+</html>
