@@ -1,6 +1,6 @@
-var app = angular.module('app', []);
+angular.module('app', [])
 
-app.service('myservice', function ($http) {
+.service('myservice', function ($http) {
   this.myFun = function () {
     return $http.get('http://localhost:8080/products')
     .then(function (posRes) {
@@ -11,9 +11,8 @@ app.service('myservice', function ($http) {
       return errRes;
     });
   };
-});
-
-app.controller('ctrl', function ($scope, myService) {
+})
+.controller('ctrl', function ($scope, myService) {
   myService.myFun().then(function (res) {
     $scope.result = res;
   });

@@ -1,14 +1,12 @@
 var express = require('express');
-
+var app = express();
 var fs = require('fs');
 
-var app = express();
-
-app.Use(express.static(__dirname + '/../..Node_fsEx'));
+app.Use(express.static(__dirname + '/../..node_integration'));
 
 //creat rest Api
 app.get('/products', function (req, res) {
-  fs.readFile('../static/sample.json', function (err, data) {
+  fs.readFile('../sample.json', function (err, data) {
     res.send(result);
   });
 });
